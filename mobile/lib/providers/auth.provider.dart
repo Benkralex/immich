@@ -176,7 +176,6 @@ class AuthNotifier extends StateNotifier<AuthState> {
       isAuthenticated: true,
       name: user.name,
       isAdmin: user.isAdmin,
-      profileImagePath: user.profileImagePath,
     );
 
     return true;
