@@ -1,4 +1,5 @@
 import { Kysely } from 'kysely';
+import { has } from 'lodash';
 import { SyncEntityType, SyncRequestType } from 'src/enum';
 import { UserRepository } from 'src/repositories/user.repository';
 import { DB } from 'src/schema';
@@ -35,9 +36,11 @@ describe(SyncEntityType.UserV1, () => {
         data: {
           deletedAt: user.deletedAt,
           email: user.email,
+          hasProfileImage: user.profileImagePath !== '',
           id: user.id,
           name: user.name,
           avatarColor: user.avatarColor,
+          profileChangedAt: user.profileChangedAt.toISOString(),
         },
         type: 'UserV1',
       },
