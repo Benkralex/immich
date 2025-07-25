@@ -39,7 +39,6 @@ class UserCircleAvatar extends ConsumerWidget {
       child: Text(user.name[0].toUpperCase()),
     );
 
-    print(user.hasProfileImage);
     return Tooltip(
       message: user.name,
       child: Container(
