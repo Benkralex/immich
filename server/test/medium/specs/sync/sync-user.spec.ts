@@ -1,5 +1,4 @@
 import { Kysely } from 'kysely';
-import { has } from 'lodash';
 import { SyncEntityType, SyncRequestType } from 'src/enum';
 import { UserRepository } from 'src/repositories/user.repository';
 import { DB } from 'src/schema';
