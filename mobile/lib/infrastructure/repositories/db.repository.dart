@@ -104,12 +104,16 @@ class Drift extends $Drift implements IDatabaseRepository {
               },
               from4To5: (m, v5) async {
                 await m.alterTable(
-                  TableMigration(v5.userEntity, newColumns: [
-                    v5.userEntity.hasProfileImage,
-                    v5.userEntity.profileChangedAt,
-                  ], columnTransformer: {
-                    v5.userEntity.profileChangedAt: currentDateAndTime,
-                  }),
+                  TableMigration(
+                    v5.userEntity,
+                    newColumns: [
+                      v5.userEntity.hasProfileImage,
+                      v5.userEntity.profileChangedAt,
+                    ],
+                    columnTransformer: {
+                      v5.userEntity.profileChangedAt: currentDateAndTime,
+                    },
+                  ),
                 );
               },
             ),
