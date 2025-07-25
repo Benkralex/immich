@@ -82,10 +82,8 @@ class UserEntity extends Table with DriftDefaultsMixin {
   BoolColumn get isAdmin => boolean().withDefault(const Constant(false))();
   TextColumn get email => text()();
 
-  BoolColumn get hasProfileImage =>
-      boolean().withDefault(const Constant(false))();
-  DateTimeColumn get profileChangedAt =>
-      dateTime().withDefault(currentDateAndTime)();
+  BoolColumn get hasProfileImage => boolean().withDefault(const Constant(false))();
+  DateTimeColumn get profileChangedAt => dateTime().withDefault(currentDateAndTime)();
 
   DateTimeColumn get updatedAt => dateTime().withDefault(currentDateAndTime)();
 
